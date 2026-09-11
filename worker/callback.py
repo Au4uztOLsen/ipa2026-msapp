@@ -12,6 +12,6 @@ def callback(ch, method, props, body):
 
     try:
         output = get_interfaces(router_ip, router_username, router_password)
-        save_interface_status(router_ip,output)
+        save_interface_status(router_ip, output)
     except Exception as e:
         print(f" Error: {e}")
