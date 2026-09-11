@@ -26,7 +26,7 @@ def main():
 @app.route("/router/<ip_address>")
 def router_Status(ip_address):
     router_data = list(
-        routerstatus.find({"router_ip": ip_address}).sort("_id", -1).limit(3)
+        routerstatus.find({"router_ip": ip_address}).sort("_id", -1).limit(5)
     )
     return render_template(
         "router_detail.html", data=router_data, ip_address=ip_address
